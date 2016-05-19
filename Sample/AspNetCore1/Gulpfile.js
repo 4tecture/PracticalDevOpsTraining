@@ -1,4 +1,4 @@
-/// <binding ProjectOpened='typescript:watch' />
+/// <binding AfterBuild='default' Clean='clean' />
 
 var path = require("path");
 var gulp = require("gulp");
