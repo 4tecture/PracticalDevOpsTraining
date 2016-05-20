@@ -21,8 +21,8 @@ gulp.task("clean", function () {
 // Compile the typescript files of the client app
 gulp.task("clientApp", [], function () {
     var tsResult = gulp.src(config.TS_SOURCES)
-    	.pipe(ts(tsClientProject))
-  		.pipe(gulp.dest(config.APP_DIST));
+        .pipe(ts(tsClientProject))
+        .pipe(gulp.dest(config.APP_DIST));
 });
 
 gulp.task("index", [], function () {
