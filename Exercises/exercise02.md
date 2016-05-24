@@ -68,7 +68,7 @@
     # Select-AzureRmSubscription -SubscriptionId ...
 
     $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName
-    $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys.Key1
+    $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys.Value[0]
 
     $container = Get-AzureStorageContainer -Context $storageContext -Name $containerName
     $cbc = $container.CloudBlobContainer
